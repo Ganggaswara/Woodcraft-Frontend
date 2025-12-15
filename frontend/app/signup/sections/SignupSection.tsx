@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 export default function SignupSection() {
-  const images = ["/login1.jpg", "/login2.jpg", "/login3.jpg"];
+  const images = ["/Login/Login1.jpg", "/Login/Login2.jpg", "/Login/Login3.jpg"];
   const [idx, setIdx] = useState(0);
   useEffect(() => {
     const id = setInterval(() => setIdx((p) => (p + 1) % images.length), 8000);

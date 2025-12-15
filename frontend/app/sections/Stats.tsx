@@ -79,7 +79,7 @@ export default function StatsSection() {
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <div className="relative h-[600px]">
                 <Image
-                  src="/login3.jpg"
+                  src="/Login/Login3.jpg"
                   alt="Elegant living room with wooden furniture"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"

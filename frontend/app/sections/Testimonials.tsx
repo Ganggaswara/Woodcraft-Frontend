@@ -36,7 +36,7 @@ export default function Testimonials() {
       <div className="mx-auto w-full max-w-[1400px] px-6 sm:px-8 py-40">
         <div className="grid lg:grid-cols-[1.2fr_1.5fr] gap-20 items-center">
           <Reveal direction="left" duration={800} className="relative rounded-2xl overflow-hidden shadow-2xl">
-            <Image src="/login1.jpg" alt="Warm living room" width={2500} height={1600} className="w-full h-[680px] object-cover" />
+            <Image src="/Login/Login1.jpg" alt="Warm living room" width={2500} height={1600} className="w-full h-[680px] object-cover" />
           </Reveal>
 
           <div className="ml-10">

@@ -3,9 +3,9 @@ import Link from "next/link";
 import Slideshow from "../utils/Slideshow";
 
 export default function StorySection() {
-  const img1 = "/craftsman1.jpg";
-  const img2 = "/craftsman2.png";
-  const img3 = "/craftsman3.png";
+  const img1 = "/About-Us/craftsman1.jpg";
+  const img2 = "/About-Us/craftsman2.png";
+  const img3 = "/About-Us/craftsman3.png";
 
   return (
     <section id="story" className="bg-[#FAF6EF]">
