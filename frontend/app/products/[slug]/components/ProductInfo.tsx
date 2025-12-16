@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import { useAuth } from "../../../providers/AuthProvider";
 import { useCart } from "../../../providers/CartProvider";
 import toast from "react-hot-toast";
+import { event as gaEvent } from "../../../../lib/analytics";
 
 export default function ProductInfo({ id, slug, image, price, name, description }: { id: string; slug: string; image: string; price: number; name: string; description: string }) {
   const router = useRouter();
@@ -16,13 +17,13 @@ export default function ProductInfo({ id, slug, image, price, name, description 
       <p className="mt-3 text-[#7a6555]">{description}</p>
 
       
-
       <div className="mt-8 grid gap-3">
         <button
           onClick={() => {
             if (!user) { toast.error("Please Login To Continue"); router.push('/login'); return; }
             add({ id, slug, name, price, qty: 1, image });
             toast.success(`${name} added to cart`);
+            gaEvent("add_to_cart", { items: [{ item_id: id, item_name: name, price }], value: price });
             router.push('/cart');
           }}
           className="w-full cursor-pointer px-6 py-3 rounded-md bg-[#5C3D2E] text-white font-semibold"
