@@ -2,7 +2,8 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter } from 'next/navigation';
-import { Eye, EyeOff, Apple } from "lucide-react";
+import { Eye, EyeOff } from "lucide-react";
+import Image from "next/image";
 import { useAuth } from "../../providers/AuthProvider";
 import toast from "react-hot-toast";
 
@@ -84,8 +85,12 @@ export default function LoginForm() {
       </div>
 
       <div className="mt-4 grid grid-cols-2 gap-3">
-        <button className="px-4 py-2 rounded-md bg-[#E8D9C6] text-[#2a1a13] border border-[#D6B48A]">Google</button>
-        <button className="px-4 py-2 rounded-md bg-[#E8D9C6] text-[#2a1a13] border border-[#D6B48A] inline-flex items-center justify-center gap-2"><Apple size={18} /> Apple</button>
+        <button className="px-4 py-2 cursor-pointer rounded-md bg-[#E8D9C6] text-[#2a1a13] border border-[#D6B48A] inline-flex items-center justify-center gap-2">
+          <Image src="/google-logo1.png" alt="Google" width={60} height={60} />
+        </button>
+        <button className="px-4 py-2 cursor-pointer rounded-md bg-[#E8D9C6] text-[#2a1a13] border border-[#D6B48A] inline-flex items-center justify-center">
+          <Image src="/apple.png" alt="Apple" width={25} height={25} />
+        </button>
       </div>
     </div>
   );
